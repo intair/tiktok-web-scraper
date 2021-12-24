@@ -38,16 +38,17 @@ async function User(tiktok_username) {
 		ProfileFollowers =  parse(data, `"Followers">`, `<`),
 		ProfileLikes = parse(data, `"Likes">`, `<`)
 
-console.log
-(`Username => @${ProfileUsername}
-Name= > ${ProfileName}
-Profile Pictue URL = > ${ProfilePFPURL}
-Verified? => ${isVerified}
-Private? => ${isPrivate}
-Bio => ${ProfileBio ? ProfileBio : "No Bio"}
-Following => ${ProfileFollowing}
-Followers => ${ProfileFollowers}
-Likes => ${ProfileLikes}`);
+	console.log(
+		`Username => @${ProfileUsername}
+		Name= > ${ProfileName}
+		Profile Pictue URL = > ${ProfilePFPURL}
+		Verified? => ${isVerified}
+		Private? => ${isPrivate}
+		Bio => ${ProfileBio ? ProfileBio : "No Bio"}
+		Following => ${ProfileFollowing}
+		Followers => ${ProfileFollowers}
+		Likes => ${ProfileLikes}
+	`);
 
 	} catch (e) {
 		console.log('User not found!');
