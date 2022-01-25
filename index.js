@@ -5,7 +5,7 @@
  */
 
 // Replace USER-HERE with a Valid Username
-const user = 'USER-HERE'
+const user = 'charlidamelio'
 
 const axios = require('axios');
 
@@ -38,16 +38,7 @@ async function User(tiktok_username) {
 		ProfileFollowers =  parse(data, `"followers-count">`, `</`),
 		ProfileLikes = parse(data, `"likes-count">`, `</`)
 
-console.log
-(`Username => @${ProfileUsername}
-Name= > ${ProfileName}
-Verified? => ${isVerified}
-Private? => ${isPrivate}
-Bio => ${ProfileBio}
-Linked Website => ${ProfileLink}
-Following => ${ProfileFollowing}
-Followers => ${ProfileFollowers}
-Likes => ${ProfileLikes}`);
+	console.log(`Username => @${ProfileUsername}\nName= > ${ProfileName}\nVerified? => ${isVerified}\nPrivate? => ${isPrivate}\nBio => ${ProfileBio}\nLinked Website => ${ProfileLink}\nFollowing => ${ProfileFollowing}\nFollowers => ${ProfileFollowers}\nLikes => ${ProfileLikes}`);
 
 	} catch (e) {
 		console.log('User Doesn\'t Exist.')
